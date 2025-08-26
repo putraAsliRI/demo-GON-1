@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SampleGON">
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.SampleGON">
@@ -42,6 +42,8 @@
             android:exported="false"/>
 
         <activity android:name=".InputNominalActivity"
+            android:exported="false"/>
+        <activity android:name=".MainActivity"
             android:exported="false"/>
     </application>
 

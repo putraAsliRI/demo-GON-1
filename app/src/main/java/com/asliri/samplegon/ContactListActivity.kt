@@ -10,6 +10,7 @@ import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.asliri.samplegon.customview.ContactBottomSheet
 import com.asliri.samplegon.databinding.ActivityListPaymentBinding
 import com.google.common.util.concurrent.ListenableFuture
 

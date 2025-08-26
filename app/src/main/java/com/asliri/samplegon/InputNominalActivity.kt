@@ -1,17 +1,19 @@
 package com.asliri.samplegon
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
+import com.asliri.samplegon.customview.CustomDialog
 import com.asliri.samplegon.databinding.ActivityInputNominalBinding
 import java.text.NumberFormat
 import java.util.Locale
 
-class InputNominalActivity : ComponentActivity() {
+class InputNominalActivity : AppCompatActivity() {
 
     private val binding by lazy {
         ActivityInputNominalBinding.inflate(layoutInflater)
     }
     private var currentAmount: Long = 0L
+    private var customDialog: CustomDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,11 +50,24 @@ class InputNominalActivity : ComponentActivity() {
                 updateAmount()
             }
         }
+        initDialog()
 
         // Konfirmasi
         binding.btnConfirm.setOnClickListener {
-            // TODO: handle konfirmasi, misalnya kirim ke server
+            customDialog?.show(supportFragmentManager, "CustomDialog")
         }
+    }
+
+    private fun initDialog() {
+        customDialog = CustomDialog(
+            title = "Gerbang Otentikasi belum terdaftar di nomor telepon ini!",
+            message = "Anda perlu mendaftarkan Nomor Telepon pada perangkat ini untuk menghubungkan nya dengan Gerbang Otentikasi Nasional. \\n\n" +
+                    "        Silakan lakukan registrasi terlebih dahulu dengan menggunakan data biometrik Anda.\n" +
+                    "        \\n \\n Kami akan mengirimkan sms link ke nomor telepon Anda untuk proses registrasi.",
+            onConfirm = {
+
+            }
+        )
     }
 
     private fun appendValue(value: String) {

@@ -1,20 +1,24 @@
-package com.asliri.samplegon
+package com.asliri.samplegon.customview
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.asliri.samplegon.InputNominalActivity
 import com.asliri.samplegon.databinding.LayoutBottomSheetContactsBinding
+import com.google.android.material.R
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.shape.CornerFamily
 import com.google.android.material.shape.MaterialShapeDrawable
 import com.google.android.material.shape.ShapeAppearanceModel
 
 class ContactBottomSheet : BottomSheetDialogFragment() {
 
     private var _binding: LayoutBottomSheetContactsBinding? = null
-    private val binding get() = _binding!!   // safe accessor
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,17 +32,17 @@ class ContactBottomSheet : BottomSheetDialogFragment() {
     override fun onStart() {
         super.onStart()
 
-        val bottomSheet = dialog?.findViewById<View>(com.google.android.material.R.id.design_bottom_sheet)
+        val bottomSheet = dialog?.findViewById<View>(R.id.design_bottom_sheet)
         bottomSheet?.let { sheet ->
 
             // Rounded corners
             val shapeAppearance = ShapeAppearanceModel.Builder()
-                .setTopLeftCorner(com.google.android.material.shape.CornerFamily.ROUNDED, 32f)
-                .setTopRightCorner(com.google.android.material.shape.CornerFamily.ROUNDED, 32f)
+                .setTopLeftCorner(CornerFamily.ROUNDED, 32f)
+                .setTopRightCorner(CornerFamily.ROUNDED, 32f)
                 .build()
 
             val materialShapeDrawable = MaterialShapeDrawable(shapeAppearance)
-            materialShapeDrawable.setTint(android.graphics.Color.WHITE)
+            materialShapeDrawable.setTint(Color.WHITE)
 
             sheet.background = materialShapeDrawable
 
@@ -61,4 +65,3 @@ class ContactBottomSheet : BottomSheetDialogFragment() {
         _binding = null
     }
 }
-
