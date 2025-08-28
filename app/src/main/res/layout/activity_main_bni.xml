@@ -21,6 +21,6 @@
         android:id="@+id/ivMain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/main"/>
+        android:src="@drawable/main_bni"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

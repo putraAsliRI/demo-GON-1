@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Gerbang Otentikasi belum terdaftar di nomor telepon ini!"
+        android:text="Otentikasi belum terdaftar di nomor telepon ini!"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"

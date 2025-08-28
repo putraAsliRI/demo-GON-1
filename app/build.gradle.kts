@@ -58,6 +58,19 @@ dependencies {
     implementation("androidx.camera:camera-view:1.2.3")
     implementation("com.google.android.material:material:1.9.0")
 
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    // Lifecycle
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.4")
+    // Koin
+    implementation("io.insert-koin:koin-android:3.5.6")
+    //okhttp
+    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.14")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

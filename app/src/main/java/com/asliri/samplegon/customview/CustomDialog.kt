@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.asliri.samplegon.databinding.DialogCustomBinding
 
-class CustomDialog(
+class RegisterDialog(
     private val title: String,
     private val message: String,
     private val onConfirm: () -> Unit
